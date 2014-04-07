@@ -2791,7 +2791,7 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1396908801
+        block.nTime    = 1396908801;
         block.nBits    = 0x1e0ffff0; //litecoin
         // block.nBits 	= 0x1d00ffff; //bitcoin
         // block.nBits 	= 0x1e377290; //target for mac cpu solo mining. 
