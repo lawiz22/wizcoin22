@@ -2779,7 +2779,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "22 Mars Test Genesis 20:38 kek";
+        const char* pszTimestamp = "7 Avril 2014 18:14 kek GENESIS BLOCK - Journée d'élection au Quebec";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2791,7 +2791,7 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1395611229;
+        block.nTime    = 1396908801
         block.nBits    = 0x1e0ffff0; //litecoin
         // block.nBits 	= 0x1d00ffff; //bitcoin
         // block.nBits 	= 0x1e377290; //target for mac cpu solo mining. 
@@ -2799,7 +2799,7 @@ bool InitBlockIndex() {
 
         if (fTestNet)
         {
-            block.nTime    = 1395534976;
+            block.nTime    = 1396908801;
             block.nNonce   = 4193292; //nonce for TestNet3 Genesis Block.
         }
         //// debug print
