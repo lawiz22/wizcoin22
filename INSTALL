@@ -1,0 +1,9 @@
+Building Wizcoin
+
+See doc/readme-qt.rst for instructions on building Wizcoin-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Wizcoin.
+
+See doc/build-*.txt for instructions on building Wizcoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Wizcoin.
