@@ -2795,7 +2795,7 @@ bool InitBlockIndex() {
         block.nBits    = 0x1e0ffff0; //litecoin
         // block.nBits 	= 0x1d00ffff; //bitcoin
         // block.nBits 	= 0x1e377290; //target for mac cpu solo mining. 
-        block.nNonce   = 293235; //nonce for Genesis Block.
+        block.nNonce   = 0; //nonce for Genesis Block.
 
         if (fTestNet)
         {
