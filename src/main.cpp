@@ -31,7 +31,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x72fe5181ea60b91497de2458c7aeea3103c70df19dd0425b43f6cdc2ac8022fa");
+uint256 hashGenesisBlock("2eaf880120c4948146a4676a00bd1b95e7232f566dfd63c239eed22f2dd4b2a4");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 18); // Wizcoin: starting difficulty just lower of 1 mac CPU.
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2795,7 +2795,7 @@ bool InitBlockIndex() {
         block.nBits    = 0x1e0ffff0; //litecoin
         // block.nBits 	= 0x1d00ffff; //bitcoin
         // block.nBits 	= 0x1e377290; //target for mac cpu solo mining. 
-        block.nNonce   = 0; //nonce for Genesis Block.
+        block.nNonce   = 131466; //nonce for Genesis Block.
 
         if (fTestNet)
         {
@@ -2810,7 +2810,7 @@ bool InitBlockIndex() {
         assert(block.hashMerkleRoot == uint256("456fa88b6493d05cbe9340d41bcaba0372b989dbdf9197522086e6ecefa6b559"));
         
         // If genesis block hash does not match, then generate new genesis hash.
-        if (true && block.GetHash() != hashGenesisBlock)
+        if (false && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
