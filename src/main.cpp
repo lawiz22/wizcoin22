@@ -2779,7 +2779,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "7 Avril 2014 18:14 kek GENESIS BLOCK - Journée d'élection au Quebec";
+        const char* pszTimestamp = "8 Avril 2014 21:13 kek GENESIS BLOCK - Journée du lendemain des élection de marde du Quebec";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2791,7 +2791,7 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1396908801;
+        block.nTime    = 1397006049;
         block.nBits    = 0x1e0ffff0; //litecoin
         // block.nBits 	= 0x1d00ffff; //bitcoin
         // block.nBits 	= 0x1e377290; //target for mac cpu solo mining. 
