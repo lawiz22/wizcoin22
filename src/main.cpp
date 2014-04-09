@@ -2746,7 +2746,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xc1;
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
-        hashGenesisBlock = uint256("3428ac1a53ca7b5dfca7fbff035dfb20144fa8693604d01e8b688473dd9e267b");
+        hashGenesisBlock = uint256("0x");
     }
 
     //
@@ -2779,7 +2779,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "8 Avril 2014 21:13 kek GENESIS BLOCK - Journée du lendemain des élection de marde du Quebec";
+        const char* pszTimestamp = "9 Avril 2014 17:15 kek GENESIS BLOCK - Ommmmm";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2791,23 +2791,23 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1397006049;
+        block.nTime    = 1397078124;
         block.nBits    = 0x1e0ffff0; //litecoin
         // block.nBits 	= 0x1d00ffff; //bitcoin
         // block.nBits 	= 0x1e377290; //target for mac cpu solo mining. 
-        block.nNonce   = 131466; //nonce for Genesis Block.
+        block.nNonce   = 0; //nonce for Genesis Block.
 
         if (fTestNet)
         {
-            block.nTime    = 1396908801;
-            block.nNonce   = 6075535; //nonce for TestNet3 Genesis Block.
+            block.nTime    = 1397078124;
+            block.nNonce   = 0; //nonce for TestNet3 Genesis Block.
         }
         //// debug print
         uint256 hash = block.GetHash();
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("456fa88b6493d05cbe9340d41bcaba0372b989dbdf9197522086e6ecefa6b559"));
+        assert(block.hashMerkleRoot == uint256("0x"));
         
         // If genesis block hash does not match, then generate new genesis hash.
         if (false && block.GetHash() != hashGenesisBlock)
