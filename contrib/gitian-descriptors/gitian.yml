@@ -1,5 +1,5 @@
 ---
-name: "Wizcoin"
+name: "linuxbuild"
 suites:
 - "lucid"
 architectures:
@@ -20,8 +20,7 @@ packages:
 - "libpng16-dev"
 reference_datetime: "2011-01-30 00:00:00"
 remotes:
-- "url": "https://github.com/wizcoin/wizcoin22.git"
-  "dir": "wizcoin22"
+
 files:
 - "miniupnpc-1.9.tar.gz"
 - "qrencode-3.4.3.tar.bz2"
