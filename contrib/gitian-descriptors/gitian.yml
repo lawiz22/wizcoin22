@@ -17,25 +17,25 @@ packages:
 - "git-core"
 - "unzip"
 - "pkg-config"
-- "libpng12-dev"
+- "libpng16-dev"
 reference_datetime: "2011-01-30 00:00:00"
 remotes:
-- "url": "https://github.com/Wizcoin-project/Wizcoin.git"
+- "url": "https://github.com/wizcoin/wizcoin22.git"
   "dir": "Wizcoin"
 files:
-- "miniupnpc-1.6.tar.gz"
-- "qrencode-3.2.0.tar.bz2"
+- "miniupnpc-1.9.tar.gz"
+- "qrencode-3.4.5.tar.bz2"
 script: |
   INSTDIR="$HOME/install"
   export LIBRARY_PATH="$INSTDIR/lib"
   #
-  tar xzf miniupnpc-1.6.tar.gz
-  cd miniupnpc-1.6
+  tar xzf miniupnpc-1.9.tar.gz
+  cd miniupnpc-1.9
   INSTALLPREFIX=$INSTDIR make $MAKEOPTS install
   cd ..
   #
-  tar xjf qrencode-3.2.0.tar.bz2
-  cd qrencode-3.2.0
+  tar xjf qrencode-3.4.5.tar.bz2
+  cd qrencode-3.4.5
   ./configure --prefix=$INSTDIR --enable-static --disable-shared
   make $MAKEOPTS install
   cd ..
