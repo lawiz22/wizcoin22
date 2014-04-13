@@ -1,5 +1,5 @@
 ---
-name: "Wizcoin22"
+name: "Wizcoin"
 suites:
 - "lucid"
 architectures:
@@ -40,7 +40,7 @@ script: |
   make $MAKEOPTS install
   cd ..
   #
-  cd Wizcoin
+  cd wizcoin22
   mkdir -p $OUTDIR/src
   git archive HEAD | tar -x -C $OUTDIR/src
   cp $OUTDIR/src/doc/README.md $OUTDIR
